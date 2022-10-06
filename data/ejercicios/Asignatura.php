@@ -46,6 +46,8 @@
         private $nombre = null;
         private $numcreditos = null;
 
+        private static $ciclo = null ;
+
         function __construct($nombre,$numcreditos)
         {
             $this-> $nombre = $nombre;
@@ -68,6 +70,15 @@
             function setNumeroCreditos($numcreditos){
                 $this->numcreditos = $numcreditos;
             }
+
+            static function getCiclo(){
+                return self::$ciclo;
+             }
+             
+             
+            static function setCiclo($nomciclo){
+                 self::$ciclo = $nomciclo;
+             }
 
                function __toString(){
 
