@@ -76,8 +76,8 @@
              }
              
              
-            static function setCiclo($nomciclo){
-                 self::$ciclo = $nomciclo;
+            static function setCiclo($nomciclo){//estatica
+                 self::$ciclo = $nomciclo;      //se accede a las estatic de esta manera
              }
 
                function __toString(){
