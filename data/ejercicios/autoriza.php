@@ -73,6 +73,16 @@
         }
     }
 
+    //recogida de datos del campo php hidden
+    if(isset($_GET["envio"])){
+        $ip = $_GET["ip"];
+        if(!empty($ip)){
+            echo "<br> La ip del servidor es : " . $ip;
+        }else{
+            echo "<br>No has podido averiguar la ip del servidor";
+        }
+    }
+
     ?>
 </body>
 </html>
