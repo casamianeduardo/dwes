@@ -17,6 +17,15 @@
      echo "<br><h3>No has introducido ningun titulo</h3>";
          }
     }
+
+    if(isset($_GET['envio'])) {
+        if (!empty($_GET['autor'])  ){
+        $autor = $_GET ['autor'];
+        echo "<br>Titulo introducido : " . $autor;
+    }else{
+     echo "<br><h3>No has introducido ningun autor</h3>";
+         }
+    }
     ?>
 </body>
 </html>
