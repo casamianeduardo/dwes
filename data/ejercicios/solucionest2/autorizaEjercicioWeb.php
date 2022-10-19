@@ -10,8 +10,8 @@
 <body>
     <?php
 
-if (isset($_POST['envio'])) {//aqui comprobamos si esta definido y no es null
-    $idiomaEscogido = $_GET['idioma']; //$idiomaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
+if (isset($_POST["envio"])) {//aqui comprobamos si esta definido y no es null
+    $idiomaEscogido = $_GET["idioma"]; //$idiomaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
     switch ($idiomaEscogido) {
         case "castellano":
             echo "hola";
@@ -24,6 +24,22 @@ if (isset($_POST['envio'])) {//aqui comprobamos si esta definido y no es null
             break;
     }
 }
+
+if (isset($_POST["envio"])) {//aqui comprobamos si esta definido y no es null
+    $marcaEscogido = $_GET["marca"]; //$marcaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
+    switch ($marcaEscogido) {
+        case "opel":
+            echo "Tu marca favorita es OPEL";
+            break;
+        case "nissan":
+            echo "Tu marca favorita es NISSAN";
+            break;
+        case "bmw":
+            echo "Tu marca favorita es BMW";
+            break;
+    }
+}
+
     ?>
 </body>
 
