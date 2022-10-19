@@ -1,0 +1,11 @@
+Crear web en la que seleccione entre 3 idiomas : español , ingles y aleman
+y selecciones una marca de coche preferida y muestre el siguiente mensaje
+
+    Bienvenido querido usuario.
+    Welcome dear user.
+    Willkommen Sehr geerhter Nutzer.
+
+    y la marca de coche seleccionada es : 
+
+        Esta informacion se debe guardar en cookies
+        Si no se selecciona idioma, por defecto sera español.
