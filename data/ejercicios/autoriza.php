@@ -54,7 +54,7 @@
 
     //recodiga de listas desplegables
     if(isset($_GET["envio"])){
-        $menupreferido = $_GET["equipo"];
+        $menupreferido = $_GET["menus"];
         if(!empty($menupreferido)){
             echo "<br> Tu plato favorito es : " . $menupreferido;
         }else{

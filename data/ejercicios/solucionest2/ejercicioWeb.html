@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="ejercicioWeb" action="autorizaEjercicioWeb.php" method="POST"></form>
+
+    <p>
+        <p>Elige tu idioma
+        </p>
+    </p>
+    <p>
+        
+        <select name="idioma" id="idioma">
+            <option value="castellano">Castellano</option>
+            <option value="ingles">Ingles</option>
+            <option value="aleman">Aleman</option>
+        </select>
+    </p>
+
+    <p>Elige tu marca de coche favorita:
+        <label for="marca1"> Opel</label>
+        <input type="radio" name="marca" id="marca1" value="opel">
+        <label for="marca2"> Nissan</label>
+        <input type="radio" name="marca" id="marca2" value="nissan">
+        <label for="marca3"> Bmw</label>
+        <input type="radio" name="marca" id="marca3" value="bmw">
+    
+    </p>
+
+    <input type="submit" name="envio" id="envio" value = "Enviar Datos">
+
+</form>
+    
+</body>
+</html>
