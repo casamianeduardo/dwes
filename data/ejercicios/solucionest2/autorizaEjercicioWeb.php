@@ -10,35 +10,37 @@
 <body>
     <?php
 
-if (isset($_POST["envio"])) {//aqui comprobamos si esta definido y no es null
-    $idiomaEscogido = $_GET["idioma"]; //$idiomaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
+if (isset($_COOKIE["cookieidioma"])) {//aqui comprobamos si esta definido y no es null
+    $idiomaEscogido = $_COOKIE["cookieidioma"]; //$idiomaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
     switch ($idiomaEscogido) {
         case "castellano":
-            echo "hola";
+            echo "Bienvenido querido usuario.";
             break;
         case "ingles":
-            echo "hello";
+            echo "Welcome dear user.";
             break;
-        case "pastel":
-            echo "wilkommen kartoffel";
+        case "aleman":
+            echo "Willkommen Sehr geerhter Nutzer.";
             break;
     }
 }
 
-if (isset($_POST["envio"])) {//aqui comprobamos si esta definido y no es null
-    $marcaEscogido = $_GET["marca"]; //$marcaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
+if (isset($_COOKIE["cookiemarca"])) {//aqui comprobamos si esta definido y no es null
+    $marcaEscogido = $_COOKIE["cookiemarca"]; //$marcaEscogido sera el que seleccionen en la opcion, si no hay ninguno escogido, por defecto español
     switch ($marcaEscogido) {
         case "opel":
-            echo "Tu marca favorita es OPEL";
+            echo "<br>Tu marca favorita es OPEL";
             break;
         case "nissan":
-            echo "Tu marca favorita es NISSAN";
+            echo "<br>Tu marca favorita es NISSAN";
             break;
         case "bmw":
-            echo "Tu marca favorita es BMW";
+            echo "<br>Tu marca favorita es BMW";
             break;
     }
 }
+
+    
 
     ?>
 </body>
