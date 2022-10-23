@@ -6,10 +6,17 @@
     <title>Document</title>
 </head>
 <body> 
-    <?php
     
+    <?php
+    $quinteto = array("Calderon"=>"Base", "Jordan"=>"Escolta", "McGrady"=>"Alero", "Antetokoumpo"=>"Ala-pivot", "O´Neal"=>"Pivot");
+    
+    foreach($quinteto as $x => $x_value) {
+      echo "Key=" . $x . ", Value=" . $x_value;
+      echo "<br>";
+    }
+    ?> 
 
-    ?>
+    
     
 </body>
 </html>
