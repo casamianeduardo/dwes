@@ -1,0 +1,15 @@
+La pagina de login : usuario y password(login.php)
+
+    -usuario = usuario
+    password = 1234     => ok , rol = 0
+
+    -usuario = admin
+    password = 4567     => ok , rol = 1
+
+    -Si no ok => muestre mensaje login erroneo
+
+    -Si login ok -> principal.php . Bienvenido usuario
+
+        -Enlace logout.php
+
+    Logout.php => cerrar la sesion y enlace/redireccion a login.php
