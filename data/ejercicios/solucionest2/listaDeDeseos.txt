@@ -1,0 +1,7 @@
+deseos.php -> desplegable : vaqueros
+                            telefono
+                            collar
+                            cd 
+se van mostrando en la misma pagina lo elegido.
+->sesiones, codificarlo con json.
+->recuperar de la informacion del json codificado
