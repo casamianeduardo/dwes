@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //para asegurarte que viene del pos
     ?>
 
     <form name="login" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
-        <!--en el action ponemos la direccion a la quequeremos mandar la informacion del formul -->
+        <!--en el action ese codigo php q significa que se comprueba contra si misma -->
         <!-- en formularios SIEMPRE METODO POST, con get mostrarias el usuario y contraseña en la url -->
 
         <p>
@@ -67,7 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //para asegurarte que viene del pos
         </p>
 
         <input type="submit" name="envio" id="envio" value="Acceder">
-
+    </form>
+    
 </body>
 
 </html>
