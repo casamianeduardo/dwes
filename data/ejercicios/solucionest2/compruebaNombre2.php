@@ -13,7 +13,7 @@
     if (isset($_GET['envio'])) {                       //isset comprueba si una variable está definida y no es null
         if (!empty($_GET['nombre'])) {               //empty comprueba si una variable contiene algún valor distinto de 0 o false
             $nombre = $_GET["nombre"];
-            if (strlen($nombre < 3)) {              //strlen cuenta el numero de letras de una cadena
+            if (strlen($nombre)< 3) {              //strlen cuenta el numero de letras de una cadena
                 echo "<br>INCORRECTO tu nombre no puede ser : " . $nombre . " No puede tener menos de 3 caracteres ";
             } else {
                 echo "<br>Hola amigo, confirmo que tu nombre es : " . $nombre;
