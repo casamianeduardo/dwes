@@ -3,21 +3,36 @@
         if(isset($_POST["envio"]))  {
             session_start();
             $item = $_POST["lista"];
+            var_dump($item);
             $_SESSION["listadeseo"][] = $item;
             //echo "<br><br>";
-            $sesioncodif = json_encode($_SESSION);
-            var_dump($sesioncodif);
+            //$sesioncodif = json_encode($_SESSION);
+            var_dump($_SESSION["listadeseo"]);
             
-            //opcion 1 para descodificar:decodificarlos como un array
+            //opcion 1 para descodificar:decodificarlos como un array, esta es la mas facil de utilizar se supone
             $sesiondecodif = json_decode($sesioncodif,true);
             echo "<br><br>";
+            $sesiondecodif["listadeseo"][4] = "coche";//hacer que la posicion 4 va a ser coche
+
+            //var_dump($sesiondecodif);
+            
+
+            //opcion 2: decodificarlos como un objeto,lo devuelve como un objeto
+            $sesiondecodif = json_decode($sesioncodif);
             //var_dump($sesiondecodif);
 
+            $sesiondecodif->{"listadeseo"}[1] = "lampara";
+            //$this->metodo, o atributo del objeto
+            //var_dump($sesiondecodif);
 
-            //opcion 2: decodificarlos como un objeto
-            $sesiondecodif = json_decode($sesioncodif);
+            //opcion 3 :otiene las propiedades de un objeto y las muestra como un array
+            $miarray = get_object_vars($sesiondecodif);
+            print_r($miarray);
+            for($i=0; $i< count($miarray,COUNT_RECURSIVE)-1;$i++){//count recursive se usa cuando hay arrays dentro de arrays
+                echo "<br>Elem3ento $i es : " . $miarray["listadeseo"][$i];
+            }
 
-            //cambiar el elemento 2 a 
+            
 
 
         }//if_post
