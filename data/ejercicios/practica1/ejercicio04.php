@@ -16,6 +16,7 @@
     $num3;
 
     echo"" . $num1 . "<br>" . "" . $num2 . "<br>" ;
+    echo"<hr>";
 
         for ($i = 0 ;$i <= 9; $i++ ){
             $num3 = $num1 + $num2;
