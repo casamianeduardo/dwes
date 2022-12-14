@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\StudyController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/hola', function ()
+{
+    echo "Hola mundo";
+});
+
+Route::get('/hola/{nombre}', function ($nombre)
+{
+    echo "Hola $nombre";
+});
+
+Route::get('/saludo/{nombre?}', function ($nombre = "Mundo")
+{
+    echo "Hola $nombre";
+});
+
+Route::get('/studies', [StudyController::class,'index']);
+Route::get('/studies/create', [StudyController::class,'create']);
+Route::get('/studies/{id}/edit', [StudyController::class,'edit']);
+Route::get('/studies/{id}', [StudyController::class,'show']);
