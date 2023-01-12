@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->text('descripcion')->after('nombre')->nullable();//añadir a la tabla el campo text, descripcion despues de nombre, y que permita nulos
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->string('solicitante',100);
+            $table->float('precio')->default(0);
+            $table->text('descripcion');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('descripcion')->nullable();
-        });
+        Schema::dropIfExists('orders');
     }
 };
