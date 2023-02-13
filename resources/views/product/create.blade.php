@@ -6,7 +6,7 @@
         <div class="col-md-12">
 
 
-<h1>Detalle de producto:</h1>
+<h1>Alta de producto:</h1>
 
 <a href="{{route('products.index')}}" class="btn btn-primary">Lista</a>
 
@@ -20,20 +20,19 @@
     <div>
 @endif
 
-    <form action="{{route('products.update',['product' => $product->id])}}" method="post">
+    <form action="{{route('products.store')}}" method="post">
         @csrf
-        @method("PUT")
         <div>
-        Nombre: <input type="text" name="nombre" id="" value="{{$product->nombre ?? ''}}">
+        Nombre: <input type="text" name="nombre" id="" >
         </div>
         <div>
-        Descripcion: <input type="text" name="descripcion" id="" value="{{$product->descripcion ?? ''}}">
+        Descripcion: <input type="text" name="descripcion" id="" >
         </div>
         <div>
-        Precio: <input type="text" name="precio" id="" value="{{$product->precio ?? ''}}">
+        Precio: <input type="text" name="precio" id="" >
         </div>
 
-        <button class="btn btn-primary" type="submit">Actualizar</button>
+        <button class="btn btn-primary" type="submit">Añadir</button>
 
     </form>
     
@@ -44,4 +43,3 @@
     </div>
 </div>
 @endsection
-

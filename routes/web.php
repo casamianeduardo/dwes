@@ -8,7 +8,7 @@ use App\Http\Controllers\StudyController;
 use App\Http\Controllers\PruebaController;
 use App\Http\Controllers\AppEjemplo;
 use App\Http\Controllers\AsignaturaController;
-
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +24,8 @@ use App\Http\Controllers\AsignaturaController;
 
 //ejemplos
 
+
+Route::resource('clientes',ClienteController::class);  //rutas de ClienteController
 
 
 Route::get('/', function () {

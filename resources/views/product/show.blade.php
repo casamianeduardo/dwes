@@ -9,7 +9,9 @@
 <h1>Detalle de producto:</h1>
 
 <a href="{{route('products.index')}}" class="btn btn-primary">Lista</a>
+@can('update', $product)
 <a href="{{route('products.edit', $product->id)}}" class="btn btn-warning">Edit</a>
+@endcan
     
     <table class="table table-striped">
         <div>
@@ -28,6 +30,12 @@
             Precio:
             <strong>
                 {{ $product->precio}}
+            </strong>
+        </div>
+        <div>
+            Color:
+            <strong>
+                {{ session('color') }}
             </strong>
         </div>
     

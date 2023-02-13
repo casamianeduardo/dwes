@@ -11,7 +11,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct()//esta funcion hace que solopueda llegar al home los usuarios logueados
     {
         $this->middleware('auth');
     }

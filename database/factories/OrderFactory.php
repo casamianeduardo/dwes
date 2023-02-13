@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Order;
+use App\Models\Cliente;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
@@ -19,13 +20,13 @@ class OrderFactory extends Factory
 
     protected $model=Order::class;//asocio al modelo
 
-
     public function definition()
     {
         return [
             "solicitante" => $this->faker->name(),
             "precio" => $this->faker->randomFloat(2,2,40),
             "descripcion" => $this->faker->paragraph(),
+            "cliente_id" => Cliente::inRandomOrder()->first()->id
         ];
     }
 }
