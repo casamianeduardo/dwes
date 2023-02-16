@@ -2,28 +2,31 @@
 
 namespace Database\Factories;
 
-use App\Models\Treatment;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Worker;
+use App\Models\Center;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class TreatmentFactory extends Factory
+class WorkerFactory extends Factory
 {
 
-    protected $model = Treatment::class;
+    protected $model = Worker::class;
 
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
+
     public function definition()
     {
         return [
             "name" => $this->faker->name(),
-            "price" => $this->faker->randomFloat(2,2,40),
-            "type" => $this->faker->address(),
+            "password" => $this->faker->password(),
+            "role" => $this->faker->randomElement(["admin","manager"]),
+            "center_id" => Center::inRandomOrder()->first()->id
         ];
     }
 }

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Treatment extends Model
 {
     use HasFactory;
+
+    public function partners(){
+        return $this->belongsToMany(Partner::class);
+    }
+
+    public function centers(){
+        return $this->belongsToMany(Center::class);
+    }
 }

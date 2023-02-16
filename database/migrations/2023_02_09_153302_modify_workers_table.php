@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users' , function(Blueprint $table) {
-            $table->unsignedBigInteger('center_id');
+        Schema::table('workers' , function(Blueprint $table) {
+            $table->unsignedBigInteger('center_id')->after('role');
             $table->foreign('center_id')->references('id')->on('centers');
         });
     }
@@ -26,9 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users' , function(Blueprint $table) {
+        Schema::table('workers' , function(Blueprint $table) {
             $table->dropForeign(['center_id']);
             $table->dropColumn('center_id');
-    });
+        });
     }
         };

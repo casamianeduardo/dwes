@@ -17,7 +17,7 @@ class CenterPartnerSeeder extends Seeder
     public function run()
     {
          //
-         Center::factory()->count(5)->create();
+         
 
          Partner::factory()->count(80)->create()->each(function($partner){
              $partner->centers()->sync(

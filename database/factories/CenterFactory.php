@@ -23,17 +23,9 @@ class CenterFactory extends Factory
     {
         $this->faker->addProvider(new Person_ES($this->faker));
 
-        $random = rand(0,1);
-
-        if($random == 0){
-            $company_reason = "SA";
-        }else{
-            $company_reason = "SL";
-        }
-
         return [
             "name" => $this->faker->name(),
-            "company_reason" => $company_reason,
+            "company_reason" => $this->faker->randomElement(["SA","SL"]),
             "address" => $this->faker->address(),
             "phone" => $this->faker->phoneNumber(),
             "email" =>$this->faker->email(),

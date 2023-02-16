@@ -26,13 +26,16 @@ class DatabaseSeeder extends Seeder
 
         //las clases padre (las que propagan la id a la otra tabla)deben ir arriba de las hijas en la lista de aqui abajo Cliente es padre de Order,asi que va encima de esta
         $this->call([
-                ProductSeeder::class,
-                ClienteSeeder::class,
-                OrderSeeder::class,
-                ClienteOrderSeeder::class
-                //CenterPartnerSeeder::class,
-                //PartnerTreatmentSeeder::class,
-                //UserSeeder::class,               
+            
+                //ProductSeeder::class,
+                //ClienteSeeder::class,
+                //OrderSeeder::class,
+                //ClienteOrderSeeder::class,
+
+                CenterWorkerSeeder::class,
+                CenterPartnerSeeder::class,
+                PartnerTreatmentSeeder::class,
+                CenterTreatmentSeeder::class            
         ]);
     }
 }
