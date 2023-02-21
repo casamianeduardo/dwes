@@ -9,7 +9,7 @@ class Order extends Model
 {
     use HasFactory;
 
-    //esta funcion es para establecer la relacion 1:n en este caso
+    //esta funcion es para establecer la relacion
     //order belongsTo pertenece a cliente
     public function clientes(){
         //return $this->belongsTo(Cliente::class); //relacion 1:N

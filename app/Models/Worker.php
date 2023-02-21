@@ -12,6 +12,6 @@ class Worker extends Model
     protected $fillable = ["name","password","role"];
 
     public function center(){
-        return $this->belongsTo(Center::class)->withPivot('date');;
+        return $this->belongsTo(Center::class);
     }
 }

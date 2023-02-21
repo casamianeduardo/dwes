@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Provider\es_ES\Person as Person_ES;
 use App\Models\Worker;
 use App\Models\Center;
 
@@ -22,8 +23,10 @@ class WorkerFactory extends Factory
 
     public function definition()
     {
+        $this->faker->addProvider(new Person_ES($this->faker));
+        
         return [
-            "name" => $this->faker->name(),
+            "name" => $this->faker->unique()->firstName,
             "password" => $this->faker->password(),
             "role" => $this->faker->randomElement(["admin","manager"]),
             "center_id" => Center::inRandomOrder()->first()->id

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\Product;
+use App\Models\Study;
 
 class StudySeeder extends Seeder
 {
@@ -16,6 +16,6 @@ class StudySeeder extends Seeder
      */
     public function run()
     {
-        Product::factory()->count(7)->create();
+        Study::factory()->count(7)->create();
     }
 }
